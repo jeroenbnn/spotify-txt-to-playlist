@@ -1,26 +1,31 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app-body" class="container mt-3">
+    <div class="row primary-view">
+      <div class="col">
+        <InputList />
+      </div>
+      <div class="col">
+        <ParserConfig />
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import 'bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import InputList from './components/InputList.vue'
+import ParserConfig from './components/ParserConfig.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    InputList,
+    ParserConfig
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
